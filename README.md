@@ -1,4 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# nangu.TV SDK demo application
+
+## Configuration
+
+To make this app working, you need to set up configuration inside `src/configuration.js` file. Please ask nangu.TV if
+you are not sure which values to use.
 
 ## Available Scripts
 
@@ -21,3 +26,15 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Project creation
+
+This project was created with these steps:
+
+1. `yarn create react-app sdk-example`
+2. `cd sdk-example/`
+4. `yarn add @nangu/sdk`
+5. `yarn add --dev @babel/core @babel/cli @babel/preset-flow`
+6. Create .babelrc file (see [https://flow.org/en/docs/install/](https://flow.org/en/docs/install/))
+7. `yarn add --dev flow-bin`
+8. `yarn run flow init`
