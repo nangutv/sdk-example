@@ -1,8 +1,10 @@
 // @flow
 
+import { ApolloProvider } from 'react-apollo';
 import React, { PureComponent } from 'react';
-
 import sdk from '@nangu/sdk';
+
+import Movies from './Movies';
 import { CONFIGURATION, LOGIN } from './configuration.js';
 
 import type { TGraphqlError, TNetworkError, TOperation } from '@nangu/sdk';
@@ -39,7 +41,7 @@ type TState = {
     loggedIn: boolean,
 };
 
-class App extends PureComponent<null, TState> {
+class App extends PureComponent<{}, TState> {
     constructor() {
         super();
 
@@ -86,7 +88,9 @@ class App extends PureComponent<null, TState> {
         }
 
         return (
-            <h1>Ready!</h1>
+            <ApolloProvider client={sdk.graphql.getDefaultApolloClientInstance()}>
+                <Movies />
+            </ApolloProvider>
         );
     }
 }
