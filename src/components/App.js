@@ -5,7 +5,7 @@ import React, { PureComponent } from 'react';
 import sdk from '@nangu/sdk';
 
 import Movies from './Movies';
-import { CONFIGURATION, LOGIN } from './configuration.js';
+import { CONFIGURATION, LOGIN } from '../configuration.js';
 
 import type { TGraphqlError, TNetworkError, TOperation } from '@nangu/sdk';
 
@@ -39,6 +39,19 @@ function networkErrorHandler(
 
 type TState = {
     loggedIn: boolean,
+};
+
+const containerStyle = {
+    justifyContent: 'center',
+    display: 'flex',
+    flexDirection: "row",
+    position: 'absolute',
+    margin: 0,
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: '#111111',
 };
 
 class App extends PureComponent<{}, TState> {
@@ -89,7 +102,9 @@ class App extends PureComponent<{}, TState> {
 
         return (
             <ApolloProvider client={sdk.graphql.getDefaultApolloClientInstance()}>
-                <Movies />
+                <div style={containerStyle}>
+                    <Movies />
+                </div>
             </ApolloProvider>
         );
     }
