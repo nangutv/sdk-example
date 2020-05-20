@@ -1,5 +1,10 @@
 # nangu.TV SDK demo application
 
+## THIS APPLICATION IS NOT MAINTAINED ANYMORE
+This application works with @nangu/sdk version 0.2.12 only. An up-to-date version of this application is included
+inside [@nangu/sdk package](https://www.npmjs.com/package/@nangu/sdk) (starting from version 0.3.2).
+
+
 ## Configuration
 
 To make this app working, you need to set up configuration inside `src/configuration.js` file. Please ask nangu.TV if
